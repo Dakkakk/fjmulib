@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f2008ab8-428e-4e46-8bca-c8d58039fbd6" name="更改" comment="将原先使用Js调用的函数用kt封装&#10;调整innerGet到get，因为get没有做额外的工作&#10;调整pwdCheck调用client.get以解决可能存在的回环问题（导致check fail）&#10;ScheduleClient.loginResultToPWDState 增加对blank的判断&#10;ScheduleClient.checkPasswordAccuracy 增加webvpn的选择&#10;去除部分函数签名中的needPwdCheck，因为pwdCheck在get中已经完成">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/src/main/kotlin/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/main/kotlin/main.kt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/test">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/test">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/lib">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="FJMULib" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="FJMULib" type="f1a62948:ProjectNode" />
+                <item name="lib" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="FJMULib" type="f1a62948:ProjectNode" />
+                <item name="lib" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="FJMULib" type="f1a62948:ProjectNode" />
+                <item name="lib" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="ktor" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="FJMULib" type="f1a62948:ProjectNode" />
+                <item name="lib" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="publishing" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="FJMULib" type="f1a62948:ProjectNode" />
+                <item name="test" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="FJMULib" type="f1a62948:ProjectNode" />
+                <item name="test" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+        <option value="Kotlin Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2dUzqsv7MHxAYi6VIxRrEHt574M" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Gradle.fjmu_Lib:lib [publishToMavenLocal].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.fjmu_Lib:lib [runFatJar].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.下载源代码.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.构建 fjmu_Lib.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.MainKt (1).executor&quot;: &quot;Debug&quot;,
+    &quot;Kotlin.MainKt.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.TestKt.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-17&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/result/Programming/stu/fjmu_Lib/test/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.33840305&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\result\Programming\stu\fjmu_Lib\test\src\main\resources" />
+      <recent name="E:\result\Programming\stu\fjmu_Lib" />
+      <recent name="E:\result\Programming\stu\fjmu_Lib\test\main" />
+      <recent name="E:\result\Programming\stu\fjmu_Lib\fjmuLib" />
+      <recent name="E:\result\Programming\stu\fjmu_Lib\test" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\result\Programming\stu\fjmu_Lib\test\src" />
+      <recent name="E:\result\Programming\stu\fjmu_Lib\lib\src" />
+      <recent name="E:\result\Programming\stu\fjmu_Lib\src\main\kotlin\cn\luckcc\fjmu\lib\database" />
+      <recent name="E:\result\Programming\stu\fjmu_Lib\src\main\kotlin\cn\luckcc\fjmu\lib\proto\paper" />
+      <recent name="E:\result\Programming\stu\fjmu_Lib\src\main\kotlin\cn\luckcc\fjmu\lib\proto\course" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="cn.luckcc.fjmu.lib.database.course" />
+      <recent name="cn.luckcc.fjmu.lib.proto" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="ChromiumRemoteDebugType" />
+        <option value="Remote" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Gradle.fjmu_Lib:lib [publishToMavenLocal]">
+    <configuration name="fjmu_Lib:lib [publishToMavenLocal]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/lib" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="publishToMavenLocal" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="fjmu_Lib:lib [runFatJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/lib" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="runFatJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="MainKt (1)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainKt" />
+      <module name="FJMULib.test.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="fjmu_Lib" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="fjmu_Lib" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.fjmu_Lib:lib [publishToMavenLocal]" />
+        <item itemvalue="Kotlin.MainKt (1)" />
+        <item itemvalue="Gradle.fjmu_Lib:lib [runFatJar]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
+        <option value="jdk-17.0.9-jbr-17.0.9-4caba194b151-51f1b679" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="f2008ab8-428e-4e46-8bca-c8d58039fbd6" name="更改" comment="" />
+      <created>1710077641688</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710077641688</updated>
+      <workItem from="1710077642748" duration="223000" />
+      <workItem from="1710077898077" duration="1591000" />
+      <workItem from="1710171018051" duration="18512000" />
+      <workItem from="1710305052963" duration="1231000" />
+      <workItem from="1710324847798" duration="9471000" />
+      <workItem from="1710394922347" duration="1418000" />
+      <workItem from="1710396660713" duration="4802000" />
+      <workItem from="1710461066916" duration="15723000" />
+      <workItem from="1710477549405" duration="1414000" />
+      <workItem from="1710478999921" duration="679000" />
+      <workItem from="1710479733489" duration="79000" />
+      <workItem from="1710479867007" duration="208000" />
+      <workItem from="1710480083753" duration="1982000" />
+      <workItem from="1710485383402" duration="567000" />
+      <workItem from="1710518171240" duration="150000" />
+      <workItem from="1710518660283" duration="533000" />
+      <workItem from="1710519889030" duration="813000" />
+      <workItem from="1710547269048" duration="201000" />
+      <workItem from="1710547512966" duration="2150000" />
+      <workItem from="1710552074781" duration="609000" />
+      <workItem from="1710560065405" duration="15000" />
+      <workItem from="1710910408952" duration="696000" />
+      <workItem from="1712303117474" duration="670000" />
+      <workItem from="1712305206047" duration="626000" />
+      <workItem from="1712388816082" duration="213000" />
+    </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1710340865649</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710340865649</updated>
+    </task>
+    <task id="LOCAL-00002" summary="test new encryptAES() function and remove js">
+      <option name="closed" value="true" />
+      <created>1710343240272</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710343240272</updated>
+    </task>
+    <task id="LOCAL-00003" summary="remove old encryptAES.js">
+      <option name="closed" value="true" />
+      <created>1710343294354</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710343294354</updated>
+    </task>
+    <task id="LOCAL-00004" summary="remove old deviceId.js&#10;move verification.js to string value">
+      <option name="closed" value="true" />
+      <created>1710343870346</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710343870346</updated>
+    </task>
+    <task id="LOCAL-00005" summary="remove old deviceId.js&#10;move verification.js to string value">
+      <option name="closed" value="true" />
+      <created>1710344046326</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710344046326</updated>
+    </task>
+    <task id="LOCAL-00006" summary="rename package to cn.luckcc.fjmu.lib">
+      <option name="closed" value="true" />
+      <created>1710396413046</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1710396413046</updated>
+    </task>
+    <task id="LOCAL-00007" summary="添加一个Config统一管理参数&#10;调整ScheduleClient的innerGet()">
+      <option name="closed" value="true" />
+      <created>1710429110044</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1710429110044</updated>
+    </task>
+    <task id="LOCAL-00008" summary="调整模块&#10;修复EONE登录">
+      <option name="closed" value="true" />
+      <created>1710481211465</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1710481211465</updated>
+    </task>
+    <task id="LOCAL-00009" summary="0">
+      <option name="closed" value="true" />
+      <created>1710520700678</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1710520700678</updated>
+    </task>
+    <task id="LOCAL-00010" summary="将原先使用Js调用的函数用kt封装&#10;调整innerGet到get，因为get没有做额外的工作&#10;调整pwdCheck调用client.get以解决可能存在的回环问题（导致check fail）&#10;ScheduleClient.loginResultToPWDState 增加对blank的判断&#10;ScheduleClient.checkPasswordAccuracy 增加webvpn的选择&#10;去除部分函数签名中的needPwdCheck，因为pwdCheck在get中已经完成">
+      <option name="closed" value="true" />
+      <created>1710552503265</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1710552503265</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="initial commit" />
+    <MESSAGE value="test new encryptAES() function and remove js" />
+    <MESSAGE value="remove old encryptAES.js" />
+    <MESSAGE value="remove old deviceId.js&#10;move verification.js to string value" />
+    <MESSAGE value="rename package to cn.luckcc.fjmu.lib" />
+    <MESSAGE value="添加一个Config统一管理参数&#10;调整ScheduleClient的innerGet()" />
+    <MESSAGE value="调整模块&#10;修复EONE登录" />
+    <MESSAGE value="0" />
+    <MESSAGE value="将原先使用Js调用的函数用kt封装&#10;调整innerGet到get，因为get没有做额外的工作&#10;调整pwdCheck调用client.get以解决可能存在的回环问题（导致check fail）&#10;ScheduleClient.loginResultToPWDState 增加对blank的判断&#10;ScheduleClient.checkPasswordAccuracy 增加webvpn的选择&#10;去除部分函数签名中的needPwdCheck，因为pwdCheck在get中已经完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="将原先使用Js调用的函数用kt封装&#10;调整innerGet到get，因为get没有做额外的工作&#10;调整pwdCheck调用client.get以解决可能存在的回环问题（导致check fail）&#10;ScheduleClient.loginResultToPWDState 增加对blank的判断&#10;ScheduleClient.checkPasswordAccuracy 增加webvpn的选择&#10;去除部分函数签名中的needPwdCheck，因为pwdCheck在get中已经完成" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/cn/luckcc/fjmu/lib/ScheduleClient.kt</url>
+          <line>190</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/cn/luckcc/fjmu/lib/ScheduleClient.kt</url>
+          <line>173</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/lib/src/main/kotlin/cn/luckcc/fjmu/lib/ScheduleClient.kt</url>
+          <line>304</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/lib/src/main/kotlin/cn/luckcc/fjmu/lib/ScheduleClient.kt</url>
+          <line>335</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
